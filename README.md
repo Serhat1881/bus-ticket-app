@@ -22,8 +22,6 @@ Proje, aşağıdaki adımları izleyerek çalıştırılabilir:
 
 Proje klasörü içindeyken aşağıdaki komutu çalıştırın:
 
-bash
-Copy code
 npm run dev
 Tarayıcınızı açın ve http://localhost:3000 adresine gidin. Proje bu adres üzerinde çalışacaktır.
 
