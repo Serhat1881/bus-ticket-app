@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import Seferler from "./data/seferler";
+import Seferler from "./data/expeditions";
 
 const SorguSonucu: React.FC = () => {
   const [selectedSefer, setSelectedSefer] = useState<number | null>(null);
@@ -15,7 +15,7 @@ const SorguSonucu: React.FC = () => {
   });
 
   const handleSeferClick = (seferId: number) => {
-    router.push(`/BiletSatis?seferId=${seferId}`);
+    router.push(`/ticket?seferId=${seferId}`);
   };
 
   return (

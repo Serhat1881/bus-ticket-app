@@ -11,7 +11,7 @@ interface User {
   birthDate: string;
 }
 
-const Kayit: React.FC = () => {
+const Register: React.FC = () => {
   const [formData, setFormData] = useState<User>({
     email: "",
     password: "",
@@ -25,7 +25,9 @@ const Kayit: React.FC = () => {
 
   const today = new Date().toISOString().split("T")[0];
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -41,7 +43,7 @@ const Kayit: React.FC = () => {
         formData.password === "" ||
         formData.firstName === "" ||
         formData.lastName === "" ||
-        formData.gender === "" ||
+        formData.gender === "" || // Validate gender
         formData.birthDate === ""
       ) {
         setError("Lütfen tüm alanları doldurun.");
@@ -50,7 +52,7 @@ const Kayit: React.FC = () => {
 
       localStorage.setItem("userData", JSON.stringify(formData));
 
-      router.push("/Giris");
+      router.push("/login");
     } catch (error) {
       setError("Kayıt sırasında bir hata oluştu.");
     }
@@ -96,14 +98,16 @@ const Kayit: React.FC = () => {
           onChange={handleChange}
           required
         />
-        <input
-          type="text"
+        <select
           name="gender"
-          placeholder="Cinsiyet"
           value={formData.gender}
           onChange={handleChange}
           required
-        />
+        >
+          <option value="">Cinsiyet Seçiniz</option>
+          <option value="Erkek">Erkek</option>
+          <option value="Kadın">Kadın</option>
+        </select>
         <input
           type="date"
           name="birthDate"
@@ -117,10 +121,10 @@ const Kayit: React.FC = () => {
       </form>
       {error && <p style={{ color: "red" }}>{error}</p>}
       <p>
-        Zaten bir hesabınız var mı? <Link href="/Giris">Giriş Yap</Link>
+        Zaten bir hesabınız var mı? <Link href="/login">Giriş Yap</Link>
       </p>
     </div>
   );
 };
 
-export default Kayit;
+export default Register;

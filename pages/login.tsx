@@ -22,7 +22,7 @@ const Giris: React.FC = () => {
 
     if (userData.email === email && userData.password === password) {
       console.log("Başarıyla giriş yapıldı!");
-      router.push("/Anasayfa");
+      router.push("/home");
     } else {
       setError("E-posta veya şifre hatalı.");
     }
@@ -50,7 +50,7 @@ const Giris: React.FC = () => {
       </form>
       {error && <p style={{ color: "red" }}>{error}</p>}
       <p>
-        Henüz bir hesabınız yok mu? <Link href="/Kayit">Kayıt Ol</Link>
+        Henüz bir hesabınız yok mu? <Link href="/register">Kayıt Ol</Link>
       </p>
     </div>
   );

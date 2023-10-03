@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import seferler from "./data/seferler";
+import seferler from "./data/expeditions";
 
 const Anasayfa: React.FC = () => {
   const [kalkisYeri, setKalkisYeri] = useState<string>("");
@@ -26,7 +26,7 @@ const Anasayfa: React.FC = () => {
       console.log("Sorgu Sonuçları:", sorguSonucu);
 
       router.push(
-        `/SorguSonucu?kalkisYeri=${kalkisYeri}&varisYeri=${varisYeri}&tarih=${tarih}`
+        `/result?kalkisYeri=${kalkisYeri}&varisYeri=${varisYeri}&tarih=${tarih}`
       );
     }
   };

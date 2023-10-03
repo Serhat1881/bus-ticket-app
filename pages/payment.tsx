@@ -23,7 +23,7 @@ const Odeme: React.FC = () => {
   useEffect(() => {
     if (paymentSuccess) {
       setTimeout(() => {
-        router.push("/Anasayfa");
+        router.push("/home");
       }, 3000);
     }
   }, [paymentSuccess, router]);

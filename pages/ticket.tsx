@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import seferler from "./data/seferler";
+import seferler from "./data/expeditions";
 
 interface Sefer {
   id: number;
@@ -65,7 +65,7 @@ const BiletSatis: React.FC = () => {
     if (selectedKoltuklar.length === 0) {
       setError("Lütfen en az bir koltuk seçin.");
     } else {
-      router.push(`/Odeme?seferId=${seferId}`);
+      router.push(`/payment?seferId=${seferId}`);
     }
   };
 
