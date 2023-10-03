@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-const Login: React.FC = () => {
+const Giris: React.FC = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [error, setError] = useState<string>("");
@@ -50,10 +50,10 @@ const Login: React.FC = () => {
       </form>
       {error && <p style={{ color: "red" }}>{error}</p>}
       <p>
-        Henüz bir hesabınız yok mu? <Link href="/Register">Kayıt Ol</Link>
+        Henüz bir hesabınız yok mu? <Link href="/Kayit">Kayıt Ol</Link>
       </p>
     </div>
   );
 };
 
-export default Login;
+export default Giris;

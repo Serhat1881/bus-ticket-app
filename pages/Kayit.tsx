@@ -11,7 +11,7 @@ interface User {
   birthDate: string;
 }
 
-const Register: React.FC = () => {
+const Kayit: React.FC = () => {
   const [formData, setFormData] = useState<User>({
     email: "",
     password: "",
@@ -50,7 +50,7 @@ const Register: React.FC = () => {
 
       localStorage.setItem("userData", JSON.stringify(formData));
 
-      router.push("/Login");
+      router.push("/Giris");
     } catch (error) {
       setError("Kayıt sırasında bir hata oluştu.");
     }
@@ -117,10 +117,10 @@ const Register: React.FC = () => {
       </form>
       {error && <p style={{ color: "red" }}>{error}</p>}
       <p>
-        Zaten bir hesabınız var mı? <Link href="/Login">Giriş Yap</Link>
+        Zaten bir hesabınız var mı? <Link href="/Giris">Giriş Yap</Link>
       </p>
     </div>
   );
 };
 
-export default Register;
+export default Kayit;
