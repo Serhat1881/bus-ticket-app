@@ -1,40 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Proje İçeriği
+Bu proje, Next.js ve TypeScript kullanarak basit bir kullanıcı kaydı uygulamasını içermektedir. Proje, tarayıcıda LocalStorage'i kullanarak kullanıcıların kayıt olmalarına ve giriş yapmalarına izin verir. Bu döküman, proje hakkında genel bilgiler, kurulum, çalıştırma ve kullanılan teknolojilerin sürüm bilgilerini içermektedir.
 
-## Getting Started
+Genel Bilgiler
+Proje Adı: Kullanıcı Kaydı Uygulaması
+Kullanılan Teknolojiler: Next.js, TypeScript
+Kullanılan Paketler: next, react, react-dom, next/router
+Kurulum
+Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
 
-First, run the development server:
+Öncelikle projeyi bilgisayarınıza klonlayın veya projenin kaynak kodunu indirin.
 
-```bash
+git clone https://github.com/kullanici-kaydi-projesi.git
+Proje klasörüne gidin.
+
+cd kullanici-kaydi-projesi
+Gerekli bağımlılıkları yüklemek için aşağıdaki komutu çalıştırın.
+
+npm install
+Çalıştırma
+Proje, aşağıdaki adımları izleyerek çalıştırılabilir:
+
+Proje klasörü içindeyken aşağıdaki komutu çalıştırın:
+
+bash
+Copy code
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Tarayıcınızı açın ve http://localhost:3000 adresine gidin. Proje bu adres üzerinde çalışacaktır.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Uygulama, kullanıcı kaydı ve giriş yapma işlemleri için basit bir arayüze sahiptir. Kullanıcılarınızı kaydedebilir ve giriş yapabilirsiniz.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Kullanılan Teknolojiler ve Sürümleri
+Proje, aşağıdaki teknolojileri ve sürümlerini kullanmaktadır:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Next.js: v13.5.4
+TypeScript: v^20
+React: v^18
+next/router: v5.1.0
+Bu dökümanı takip ederek projeyi kolayca kurabilir, çalıştırabilir ve kullanabilirsiniz. Başka herhangi bir ekstra efor gerektirmez. Projenin temel işlevselliği, kullanıcı kaydı ve giriş işlemleri sağlamaktadır. Daha fazla özellik eklemek veya iyileştirmeler yapmak için proje kaynak kodunu inceleyebilirsiniz.
