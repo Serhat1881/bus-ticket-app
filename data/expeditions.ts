@@ -6,8 +6,8 @@ const seferler = [
     tarih: "2023-10-10",
     kalkisYeriLabel: "İstanbul",
     varisYeriLabel: "Ankara",
-    bosKoltuklar: 20, // Boş koltuk sayısı
-    fiyat: 100, // Bilet fiyatı
+    bosKoltuklar: 20,
+    fiyat: 100,
     koltuklar: [
       { dolu: true, cinsiyet: "erkek" },
       { dolu: true, cinsiyet: "kadın" },

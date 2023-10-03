@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import Seferler from "./data/expeditions";
+import Seferler from "../data/expeditions";
 
 const SorguSonucu: React.FC = () => {
   const [selectedSefer, setSelectedSefer] = useState<number | null>(null);

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import seferler from "./data/expeditions";
+import seferler from "../data/expeditions";
 
 interface Sefer {
   id: number;
